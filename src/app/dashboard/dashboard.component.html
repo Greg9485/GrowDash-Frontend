@@ -1,0 +1,13 @@
+<div class="p-6">
+  <h1 class="text-2xl font-bold mb-4">GrowDash 🌿</h1>
+
+  <div *ngIf="loading">Loading sensor data...</div>
+  <div *ngIf="error" class="text-red-600">{{ error }}</div>
+
+  <div *ngIf="!loading && !error" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let sensor of sensors" class="p-4 bg-gray-100 rounded shadow">
+      <h2 class="font-semibold">{{ sensor.name }}</h2>
+      <p class="text-lg">{{ sensor.value }} {{ sensor.unit }}</p>
+    </div>
+  </div>
+</div>
