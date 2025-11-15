@@ -1,0 +1,53 @@
+.sensor-card {
+    height: 100%;
+    min-height: 150px;
+    background: rgba(30, 30, 30, 0.85); /* slightly darker glassy look */
+   
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px); /* glassy blur effect */
+    border: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+    /* transition: transform 0.2s, box-shadow 0.2s; */
+  }
+  
+
+  .sensor-card h3 {
+    font-size: 1.2rem;
+    color: #7effa5;
+  }
+  
+  .sensor-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sensor-card .controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sensor-card select {
+    background: rgba(50,50,50,0.9);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.4rem;
+    border: 1px solid #555;
+  }
+  
+  .sensor-card button {
+    background: rgba(66,165,245,0.2);
+    color: #42A5F5;
+    border: 1px solid #42A5F5;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  canvas {
+    margin-top: 0.5rem;
+  }
+  

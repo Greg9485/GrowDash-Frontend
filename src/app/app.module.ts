@@ -4,10 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SensorCardComponent } from './components/sensor-card/sensor-card.component';
+import { NgChartsModule } from 'ng2-charts';
+import { GridsterModule } from 'angular-gridster2';
+import { ControlPanelComponent } from './components/control-panel/control-panel.component';
+
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent],
-  imports: [BrowserModule, HttpClientModule, FormsModule],
+  declarations: [AppComponent, ControlPanelComponent, DashboardComponent, SensorCardComponent],
+  imports: [BrowserModule, FormsModule, GridsterModule, HttpClientModule, NgChartsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

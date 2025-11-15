@@ -20,4 +20,12 @@ export class SensorsService {
   getSensors(): Observable<Sensor[]> {
     return this.http.get<Sensor[]>(this.apiUrl);
   }
+  
+  getSensorHistory(id: number, range: string): Observable<{ timestamp: string, value: number }[]> {
+    return this.http.get<{ timestamp: string, value: number }[]>(
+      `${this.apiUrl}/${id}/history?range=${range}`
+    );
+  }
+  
+  
 }

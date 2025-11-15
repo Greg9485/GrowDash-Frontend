@@ -1,0 +1,24 @@
+<div class="sensor-card">
+    <h3>{{ sensor.name }}</h3>
+    <p>Current Value: {{ sensor.value }} {{ sensor.unit }}</p>
+  
+    <div class="controls">
+      <label>Range:</label>
+      <select [(ngModel)]="timeRange" (change)="changeTimeRange(timeRange)">
+        <option value="hour">Last Hour</option>
+        <option value="day">Last Day</option>
+        <option value="week">Last Week</option>
+        <option value="month">Last Month</option>
+      </select>
+    </div>
+  
+    <div style="display: block;">
+        <button (click)="toggleFullscreen()">🔍</button>
+        <canvas baseChart
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            chartType="line">
+        </canvas>
+    </div>
+  </div>
+  

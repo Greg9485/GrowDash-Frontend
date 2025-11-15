@@ -1,3 +1,60 @@
-.card { background:#fff; padding:16px; border-radius:10px; box-shadow: 0 6px 18px rgba(18,18,18,0.08); }
-.grid { display:flex; gap:12px; flex-wrap:wrap; }
-.sensor { flex:1 1 200px; padding:12px; border-radius:8px; border:1px solid #eee; background:#fff }
+:host {
+    display: block;
+    height: calc(100vh - 80px);
+  }
+  
+  .dashboard-header {
+    padding: 1rem;
+    flex: 0 0 auto;
+  }
+
+  .dashboard-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .dashboard-container {
+    flex: 1;
+    padding: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  gridster {
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.85); /* slightly darker glassy look */
+
+  }
+ 
+  /* .gridster-item {
+    background: transparent !important; 
+    display: flex;                      
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 !important;              
+    overflow: visible;                  
+  }*/
+
+  /* Make the gridster-item and its wrapper fully transparent */
+.gridster-item {
+    background: transparent !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  
+  .gridster-item > div {
+    background: transparent !important;
+    border-radius: 16px !important; /* match your card radius */
+    overflow: visible !important;
+  }
+  
+  /* Optional: remove resize handles background */
+  .gridster-item .resize-handle {
+    background: rgba(255, 255, 255, 0) !important;
+  }
+  

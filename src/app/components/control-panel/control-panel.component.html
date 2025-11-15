@@ -1,0 +1,33 @@
+<div class="control-panel">
+    <h2>Dashboard Controls</h2>  
+
+   
+    <div class="viewSection">
+
+        <div class="sectionLabel">
+            <label>Views</label>
+        </div>
+    
+    
+        <div class="section">
+        <button 
+            [class.active]="selectedSensorId === null" 
+            (click)="selectOverall()">
+            Overall View
+        </button>
+        </div>
+  
+        <div class="section">
+            <div class="metrics">
+            <button 
+                *ngFor="let sensor of sensors"
+                [class.active]="selectedSensorId === sensor.id"
+                (click)="selectMetric(sensor.id)">
+                {{ sensor.name }}
+            </button>
+            </div>
+        </div>
+
+    </div>
+  </div>
+  
